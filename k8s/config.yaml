@@ -1,0 +1,400 @@
+# hello-config.yaml
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: hello-k8s-html
+  namespace: gin-#{Octopus.Environment.Name | toLower}
+  labels:
+    app: hello-k8s
+data:
+  index.html: |
+    <!doctype html>
+    <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Gin Is Cool</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+      <style>
+        :root {
+          --juniper: #1f3b4d;
+          --juniper-deep: #13232e;
+          --botanical: #6b8f71;
+          --citrus: #e8b04b;
+          --tonic: #f4f1ea;
+          --ink: #1d2327;
+          --muted: #5c6770;
+          --card: #ffffff;
+          --serif: "Playfair Display", Georgia, "Times New Roman", serif;
+          --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+          margin: 0;
+          font-family: var(--sans);
+          color: var(--ink);
+          background: var(--tonic);
+          line-height: 1.6;
+        }
+
+        a { color: inherit; }
+
+        .wrap {
+          max-width: 1080px;
+          margin: 0 auto;
+          padding-inline: 1.5rem;
+        }
+
+        /* Hero */
+        .hero {
+          position: relative;
+          overflow: hidden;
+          color: var(--tonic);
+          background:
+            radial-gradient(circle at 80% 20%, rgba(232, 176, 75, 0.25), transparent 40%),
+            radial-gradient(circle at 10% 90%, rgba(107, 143, 113, 0.35), transparent 45%),
+            linear-gradient(160deg, var(--juniper) 0%, var(--juniper-deep) 100%);
+          padding-block: 6rem 7rem;
+          text-align: center;
+        }
+
+        .bubbles span {
+          position: absolute;
+          bottom: -40px;
+          width: 14px;
+          height: 14px;
+          border-radius: 50%;
+          background: rgba(244, 241, 234, 0.18);
+          border: 1px solid rgba(244, 241, 234, 0.35);
+          animation: rise 9s infinite ease-in;
+        }
+        .bubbles span:nth-child(1) { left: 8%;  animation-duration: 8s; }
+        .bubbles span:nth-child(2) { left: 22%; width: 8px;  height: 8px;  animation-duration: 11s; animation-delay: 2s; }
+        .bubbles span:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 10s; animation-delay: 4s; }
+        .bubbles span:nth-child(4) { left: 58%; width: 10px; height: 10px; animation-duration: 7s;  animation-delay: 1s; }
+        .bubbles span:nth-child(5) { left: 74%; animation-duration: 12s; animation-delay: 3s; }
+        .bubbles span:nth-child(6) { left: 90%; width: 6px;  height: 6px;  animation-duration: 9s;  animation-delay: 5s; }
+
+        @keyframes rise {
+          0%   { transform: translateY(0) translateX(0); opacity: 0; }
+          10%  { opacity: 1; }
+          100% { transform: translateY(-110vh) translateX(20px); opacity: 0; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .bubbles { display: none; }
+        }
+
+        .eyebrow {
+          display: inline-block;
+          font-size: 0.8rem;
+          font-weight: 600;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: var(--citrus);
+          border: 1px solid rgba(232, 176, 75, 0.5);
+          border-radius: 999px;
+          padding: 0.35rem 1rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .hero h1 {
+          font-family: var(--serif);
+          font-weight: 800;
+          font-size: clamp(3rem, 9vw, 6rem);
+          line-height: 1;
+          margin: 0 0 1.25rem;
+        }
+
+        .hero h1 em {
+          font-style: italic;
+          font-weight: 600;
+          color: var(--citrus);
+        }
+
+        .hero p {
+          max-width: 36rem;
+          margin: 0 auto 2.5rem;
+          font-size: 1.15rem;
+          color: rgba(244, 241, 234, 0.85);
+        }
+
+        .btn {
+          display: inline-block;
+          text-decoration: none;
+          font-weight: 600;
+          padding: 0.85rem 1.75rem;
+          border-radius: 999px;
+          background: var(--citrus);
+          color: var(--juniper-deep);
+          transition: transform 0.15s ease, box-shadow 0.15s ease;
+        }
+        .btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Sections */
+        section { padding-block: 5rem; }
+
+        h2 {
+          font-family: var(--serif);
+          font-size: clamp(2rem, 5vw, 2.75rem);
+          margin: 0 0 0.75rem;
+          color: var(--juniper);
+        }
+
+        .lede {
+          color: var(--muted);
+          max-width: 40rem;
+          margin: 0 0 3rem;
+          font-size: 1.05rem;
+        }
+
+        .grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .card {
+          background: var(--card);
+          border-radius: 18px;
+          padding: 2rem 1.75rem;
+          box-shadow: 0 1px 2px rgba(19, 35, 46, 0.06), 0 8px 24px rgba(19, 35, 46, 0.06);
+          border-top: 4px solid var(--botanical);
+          transition: transform 0.2s ease;
+        }
+        .card:hover { transform: translateY(-4px); }
+        .card:nth-child(2) { border-top-color: var(--citrus); }
+        .card:nth-child(3) { border-top-color: var(--juniper); }
+        .card:nth-child(4) { border-top-color: #b5667a; }
+
+        .card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
+
+        .card h3 {
+          font-family: var(--serif);
+          font-size: 1.35rem;
+          margin: 0 0 0.5rem;
+          color: var(--juniper);
+        }
+
+        .card p { margin: 0; color: var(--muted); }
+
+        /* Botanicals */
+        .botanicals {
+          background: var(--juniper);
+          color: var(--tonic);
+        }
+        .botanicals h2 { color: var(--tonic); }
+        .botanicals .lede { color: rgba(244, 241, 234, 0.75); }
+
+        .pills {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0.75rem;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+        .pills li {
+          padding: 0.6rem 1.2rem;
+          border-radius: 999px;
+          background: rgba(244, 241, 234, 0.08);
+          border: 1px solid rgba(244, 241, 234, 0.2);
+          font-weight: 500;
+        }
+        .pills li.star {
+          background: var(--citrus);
+          color: var(--juniper-deep);
+          border-color: var(--citrus);
+        }
+
+        /* Cocktails */
+        .cocktails {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 1.5rem;
+        }
+        .cocktail {
+          display: flex;
+          gap: 1.25rem;
+          align-items: flex-start;
+          padding: 1.5rem;
+          border-radius: 18px;
+          background: var(--card);
+          box-shadow: 0 1px 2px rgba(19, 35, 46, 0.06);
+        }
+        .cocktail .num {
+          flex: none;
+          font-family: var(--serif);
+          font-size: 2.25rem;
+          font-weight: 800;
+          line-height: 1;
+          color: var(--botanical);
+        }
+        .cocktail h3 {
+          margin: 0 0 0.25rem;
+          font-size: 1.1rem;
+          color: var(--juniper);
+        }
+        .cocktail p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+
+        /* Quote */
+        blockquote {
+          margin: 0 auto;
+          max-width: 46rem;
+          text-align: center;
+          font-family: var(--serif);
+          font-style: italic;
+          font-size: clamp(1.5rem, 4vw, 2.25rem);
+          line-height: 1.35;
+          color: var(--juniper);
+        }
+        blockquote cite {
+          display: block;
+          margin-top: 1rem;
+          font-family: var(--sans);
+          font-style: normal;
+          font-size: 0.95rem;
+          color: var(--muted);
+        }
+
+        footer {
+          background: var(--juniper-deep);
+          color: rgba(244, 241, 234, 0.7);
+          text-align: center;
+          padding-block: 2.5rem;
+          font-size: 0.9rem;
+        }
+        footer strong { color: var(--citrus); }
+      </style>
+    </head>
+    <body>
+
+      <header class="hero">
+        <div class="bubbles" aria-hidden="true">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+        <div class="wrap">
+          <span class="eyebrow">A public service announcement</span>
+          <h1>Gin is <em>cool.</em></h1>
+          <p>Juniper-forward, endlessly mixable, and about four centuries of history in every glass. It's time everyone knew.</p>
+          <a class="btn" href="#why">Find out why</a>
+        </div>
+      </header>
+
+      <main>
+        <section id="why">
+          <div class="wrap">
+            <h2>Why gin?</h2>
+            <p class="lede">Some spirits do one thing well. Gin does a dozen things well, and looks good doing them.</p>
+            <div class="grid">
+              <article class="card">
+                <div class="icon" aria-hidden="true">🌿</div>
+                <h3>It's a botanical garden</h3>
+                <p>Every gin starts with juniper, then distillers add whatever they like: citrus peel, coriander, cardamom, rose, cucumber, seaweed. No two taste the same.</p>
+              </article>
+              <article class="card">
+                <div class="icon" aria-hidden="true">🍸</div>
+                <h3>It carries the classics</h3>
+                <p>The Martini, the Negroni, the Tom Collins, the Gimlet. A lot of the cocktail canon was built on gin.</p>
+              </article>
+              <article class="card">
+                <div class="icon" aria-hidden="true">📜</div>
+                <h3>It has a past</h3>
+                <p>From Dutch genever to the London gin craze to Prohibition bathtubs, gin has been at the centre of a lot of good stories and a few bad decisions.</p>
+              </article>
+              <article class="card">
+                <div class="icon" aria-hidden="true">🫧</div>
+                <h3>It's easy to love</h3>
+                <p>You don't need a bar cart. Gin, tonic, ice and a wedge of lime is one of the best drinks there is, and it takes thirty seconds.</p>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <section class="botanicals">
+          <div class="wrap">
+            <h2>What's in the bottle</h2>
+            <p class="lede">Juniper is the only rule. Everything else is the distiller showing off.</p>
+            <ul class="pills">
+              <li class="star">Juniper</li>
+              <li>Coriander seed</li>
+              <li>Angelica root</li>
+              <li>Orris root</li>
+              <li>Lemon peel</li>
+              <li>Orange peel</li>
+              <li>Cardamom</li>
+              <li>Cassia bark</li>
+              <li>Liquorice</li>
+              <li>Grains of paradise</li>
+              <li>Cucumber</li>
+              <li>Rose petals</li>
+              <li>Pink peppercorn</li>
+              <li>Lavender</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <h2>Start here</h2>
+            <p class="lede">Four drinks that make the case better than any web page could.</p>
+            <div class="cocktails">
+              <div class="cocktail">
+                <span class="num">01</span>
+                <div>
+                  <h3>Gin &amp; Tonic</h3>
+                  <p>50ml gin, 150ml good tonic, lots of ice, a citrus wedge. Big glass.</p>
+                </div>
+              </div>
+              <div class="cocktail">
+                <span class="num">02</span>
+                <div>
+                  <h3>Negroni</h3>
+                  <p>Equal parts gin, Campari and sweet vermouth. Stir over ice, garnish with orange.</p>
+                </div>
+              </div>
+              <div class="cocktail">
+                <span class="num">03</span>
+                <div>
+                  <h3>Dry Martini</h3>
+                  <p>60ml gin, 10ml dry vermouth. Stir until very cold, strain, add a twist or an olive.</p>
+                </div>
+              </div>
+              <div class="cocktail">
+                <span class="num">04</span>
+                <div>
+                  <h3>Gimlet</h3>
+                  <p>60ml gin, 20ml fresh lime juice, 15ml sugar syrup. Shake hard, strain, done.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="wrap">
+            <blockquote>
+              "The gin and tonic has saved more Englishmen's lives, and minds, than all the doctors in the Empire."
+              <cite>Winston Churchill (probably)</cite>
+            </blockquote>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <div class="wrap">
+          Served fresh from Kubernetes. <strong>Gin is cool.</strong> Please drink responsibly.
+        </div>
+      </footer>
+
+    </body>
+    </html>

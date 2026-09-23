@@ -1,0 +1,14 @@
+# hello-service.yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-k8s
+  namespace: gin-#{Octopus.Environment.Name | toLower}
+spec:
+  selector:
+    app: hello-k8s
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: ClusterIP
