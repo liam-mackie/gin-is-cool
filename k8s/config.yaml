@@ -13,7 +13,7 @@ data:
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Gin Is Cool</title>
+      <title>Gin Is Cool | Octopus Deploy</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -283,9 +283,9 @@ data:
           <span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
         <div class="wrap">
-          <span class="eyebrow">A public service announcement</span>
+          <span class="eyebrow">A public service announcement from Octopus Deploy</span>
           <h1>Gin is <em>cool.</em></h1>
-          <p>Juniper-forward, endlessly mixable, and about four centuries of history in every glass. It's time everyone knew.</p>
+          <p>Not the drink. The person. Gin works at Octopus Deploy, and frankly the rest of us are lucky to be here at the same time. It's time everyone knew.</p>
           <a class="btn" href="#why">Find out why</a>
         </div>
       </header>
@@ -293,28 +293,28 @@ data:
       <main>
         <section id="why">
           <div class="wrap">
-            <h2>Why gin?</h2>
-            <p class="lede">Some spirits do one thing well. Gin does a dozen things well, and looks good doing them.</p>
+            <h2>Why Gin?</h2>
+            <p class="lede">Some people are good at one thing. Gin is good at a dozen things, and makes it look easy.</p>
             <div class="grid">
               <article class="card">
-                <div class="icon" aria-hidden="true">🌿</div>
-                <h3>It's a botanical garden</h3>
-                <p>Every gin starts with juniper, then distillers add whatever they like: citrus peel, coriander, cardamom, rose, cucumber, seaweed. No two taste the same.</p>
+                <div class="icon" aria-hidden="true">🐙</div>
+                <h3>Octopus through and through</h3>
+                <p>Eight arms' worth of output from one human. Deployments, conversations, problems solved: Gin gets a tentacle on all of it.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">🍸</div>
-                <h3>It carries the classics</h3>
-                <p>The Martini, the Negroni, the Tom Collins, the Gimlet. A lot of the cocktail canon was built on gin.</p>
+                <div class="icon" aria-hidden="true">🚀</div>
+                <h3>Ships with confidence</h3>
+                <p>Gin's work goes out green. Reliable, repeatable, and nobody has to hold their breath when it hits production.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">📜</div>
-                <h3>It has a past</h3>
-                <p>From Dutch genever to the London gin craze to Prohibition bathtubs, gin has been at the centre of a lot of good stories and a few bad decisions.</p>
+                <div class="icon" aria-hidden="true">🤝</div>
+                <h3>Makes the team better</h3>
+                <p>The kind of colleague who leaves every thread, meeting and pull request a bit better than they found it.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">🫧</div>
-                <h3>It's easy to love</h3>
-                <p>You don't need a bar cart. Gin, tonic, ice and a wedge of lime is one of the best drinks there is, and it takes thirty seconds.</p>
+                <div class="icon" aria-hidden="true">✨</div>
+                <h3>Easy to love</h3>
+                <p>Helpful, generous with time, and good company. Working with Gin is one of the best parts of the job.</p>
               </article>
             </div>
           </div>
@@ -322,23 +322,23 @@ data:
 
         <section class="botanicals">
           <div class="wrap">
-            <h2>What's in the bottle</h2>
-            <p class="lede">Juniper is the only rule. Everything else is the distiller showing off.</p>
+            <h2>What Gin brings</h2>
+            <p class="lede">Being cool is the only rule. Everything else is Gin showing off.</p>
             <ul class="pills">
-              <li class="star">Juniper</li>
-              <li>Coriander seed</li>
-              <li>Angelica root</li>
-              <li>Orris root</li>
-              <li>Lemon peel</li>
-              <li>Orange peel</li>
-              <li>Cardamom</li>
-              <li>Cassia bark</li>
-              <li>Liquorice</li>
-              <li>Grains of paradise</li>
-              <li>Cucumber</li>
-              <li>Rose petals</li>
-              <li>Pink peppercorn</li>
-              <li>Lavender</li>
+              <li class="star">Coolness</li>
+              <li>Kindness</li>
+              <li>Curiosity</li>
+              <li>Good judgement</li>
+              <li>Clear thinking</li>
+              <li>Calm under pressure</li>
+              <li>Great ideas</li>
+              <li>Attention to detail</li>
+              <li>Humour</li>
+              <li>Generosity</li>
+              <li>Craft</li>
+              <li>Ownership</li>
+              <li>Collaboration</li>
+              <li>Excellent vibes</li>
             </ul>
           </div>
         </section>
@@ -346,34 +346,34 @@ data:
         <section>
           <div class="wrap">
             <h2>Start here</h2>
-            <p class="lede">Four drinks that make the case better than any web page could.</p>
+            <p class="lede">Four ways to appreciate Gin that make the case better than any web page could.</p>
             <div class="cocktails">
               <div class="cocktail">
                 <span class="num">01</span>
                 <div>
-                  <h3>Gin &amp; Tonic</h3>
-                  <p>50ml gin, 150ml good tonic, lots of ice, a citrus wedge. Big glass.</p>
+                  <h3>Say thanks</h3>
+                  <p>Drop Gin a message in Slack. Be specific about what they did. Emoji encouraged.</p>
                 </div>
               </div>
               <div class="cocktail">
                 <span class="num">02</span>
                 <div>
-                  <h3>Negroni</h3>
-                  <p>Equal parts gin, Campari and sweet vermouth. Stir over ice, garnish with orange.</p>
+                  <h3>Ask for their take</h3>
+                  <p>Stuck on something? Gin's perspective is worth having. Ask early.</p>
                 </div>
               </div>
               <div class="cocktail">
                 <span class="num">03</span>
                 <div>
-                  <h3>Dry Martini</h3>
-                  <p>60ml gin, 10ml dry vermouth. Stir until very cold, strain, add a twist or an olive.</p>
+                  <h3>Pair up</h3>
+                  <p>Grab some time and work on something together. You'll both come out ahead.</p>
                 </div>
               </div>
               <div class="cocktail">
                 <span class="num">04</span>
                 <div>
-                  <h3>Gimlet</h3>
-                  <p>60ml gin, 20ml fresh lime juice, 15ml sugar syrup. Shake hard, strain, done.</p>
+                  <h3>Spread the word</h3>
+                  <p>Share this page. Everyone at Octopus deserves to know that Gin is cool.</p>
                 </div>
               </div>
             </div>
@@ -383,8 +383,8 @@ data:
         <section>
           <div class="wrap">
             <blockquote>
-              "The gin and tonic has saved more Englishmen's lives, and minds, than all the doctors in the Empire."
-              <cite>Winston Churchill (probably)</cite>
+              "Gin has saved more deployments, and more of our sanity, than all the runbooks in the Octoverse."
+              <cite>Everyone at Octopus Deploy (probably)</cite>
             </blockquote>
           </div>
         </section>
@@ -392,7 +392,7 @@ data:
 
       <footer>
         <div class="wrap">
-          Served fresh from Kubernetes. <strong>Gin is cool.</strong> Please drink responsibly.
+          Served fresh from Kubernetes, deployed with Octopus. <strong>Gin is cool.</strong> Please appreciate responsibly.
         </div>
       </footer>
 
