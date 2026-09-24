@@ -13,19 +13,19 @@ data:
     <head>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <title>Gin Is Cool | Octopus Deploy</title>
+      <title>Fat Cats | Octopus Deploy</title>
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
       <style>
         :root {
-          --juniper: #1f3b4d;
-          --juniper-deep: #13232e;
-          --botanical: #6b8f71;
-          --citrus: #e8b04b;
-          --tonic: #f4f1ea;
-          --ink: #1d2327;
-          --muted: #5c6770;
+          --tabby: #7a4a24;
+          --tabby-deep: #3f2412;
+          --ginger: #e0833a;
+          --cream: #f2c46d;
+          --milk: #fbf5ec;
+          --ink: #2a1f18;
+          --muted: #6e5d50;
           --card: #ffffff;
           --serif: "Playfair Display", Georgia, "Times New Roman", serif;
           --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -39,7 +39,7 @@ data:
           margin: 0;
           font-family: var(--sans);
           color: var(--ink);
-          background: var(--tonic);
+          background: var(--milk);
           line-height: 1.6;
         }
 
@@ -55,40 +55,37 @@ data:
         .hero {
           position: relative;
           overflow: hidden;
-          color: var(--tonic);
+          color: var(--milk);
           background:
-            radial-gradient(circle at 80% 20%, rgba(232, 176, 75, 0.25), transparent 40%),
-            radial-gradient(circle at 10% 90%, rgba(107, 143, 113, 0.35), transparent 45%),
-            linear-gradient(160deg, var(--juniper) 0%, var(--juniper-deep) 100%);
+            radial-gradient(circle at 80% 20%, rgba(242, 196, 109, 0.28), transparent 40%),
+            radial-gradient(circle at 10% 90%, rgba(224, 131, 58, 0.35), transparent 45%),
+            linear-gradient(160deg, var(--tabby) 0%, var(--tabby-deep) 100%);
           padding-block: 6rem 7rem;
           text-align: center;
         }
 
-        .bubbles span {
+        .paws span {
           position: absolute;
           bottom: -40px;
-          width: 14px;
-          height: 14px;
-          border-radius: 50%;
-          background: rgba(244, 241, 234, 0.18);
-          border: 1px solid rgba(244, 241, 234, 0.35);
+          font-size: 1.25rem;
+          opacity: 0;
           animation: rise 9s infinite ease-in;
         }
-        .bubbles span:nth-child(1) { left: 8%;  animation-duration: 8s; }
-        .bubbles span:nth-child(2) { left: 22%; width: 8px;  height: 8px;  animation-duration: 11s; animation-delay: 2s; }
-        .bubbles span:nth-child(3) { left: 40%; width: 20px; height: 20px; animation-duration: 10s; animation-delay: 4s; }
-        .bubbles span:nth-child(4) { left: 58%; width: 10px; height: 10px; animation-duration: 7s;  animation-delay: 1s; }
-        .bubbles span:nth-child(5) { left: 74%; animation-duration: 12s; animation-delay: 3s; }
-        .bubbles span:nth-child(6) { left: 90%; width: 6px;  height: 6px;  animation-duration: 9s;  animation-delay: 5s; }
+        .paws span:nth-child(1) { left: 8%;  animation-duration: 8s; }
+        .paws span:nth-child(2) { left: 22%; font-size: 0.9rem; animation-duration: 11s; animation-delay: 2s; }
+        .paws span:nth-child(3) { left: 40%; font-size: 1.6rem; animation-duration: 10s; animation-delay: 4s; }
+        .paws span:nth-child(4) { left: 58%; font-size: 1rem;   animation-duration: 7s;  animation-delay: 1s; }
+        .paws span:nth-child(5) { left: 74%; animation-duration: 12s; animation-delay: 3s; }
+        .paws span:nth-child(6) { left: 90%; font-size: 0.8rem; animation-duration: 9s;  animation-delay: 5s; }
 
         @keyframes rise {
-          0%   { transform: translateY(0) translateX(0); opacity: 0; }
-          10%  { opacity: 1; }
-          100% { transform: translateY(-110vh) translateX(20px); opacity: 0; }
+          0%   { transform: translateY(0) rotate(0deg); opacity: 0; }
+          10%  { opacity: 0.5; }
+          100% { transform: translateY(-110vh) rotate(25deg); opacity: 0; }
         }
 
         @media (prefers-reduced-motion: reduce) {
-          .bubbles { display: none; }
+          .paws { display: none; }
         }
 
         .eyebrow {
@@ -97,8 +94,8 @@ data:
           font-weight: 600;
           letter-spacing: 0.2em;
           text-transform: uppercase;
-          color: var(--citrus);
-          border: 1px solid rgba(232, 176, 75, 0.5);
+          color: var(--cream);
+          border: 1px solid rgba(242, 196, 109, 0.5);
           border-radius: 999px;
           padding: 0.35rem 1rem;
           margin-bottom: 1.5rem;
@@ -115,14 +112,14 @@ data:
         .hero h1 em {
           font-style: italic;
           font-weight: 600;
-          color: var(--citrus);
+          color: var(--cream);
         }
 
         .hero p {
           max-width: 36rem;
           margin: 0 auto 2.5rem;
           font-size: 1.15rem;
-          color: rgba(244, 241, 234, 0.85);
+          color: rgba(251, 245, 236, 0.85);
         }
 
         .btn {
@@ -131,8 +128,8 @@ data:
           font-weight: 600;
           padding: 0.85rem 1.75rem;
           border-radius: 999px;
-          background: var(--citrus);
-          color: var(--juniper-deep);
+          background: var(--cream);
+          color: var(--tabby-deep);
           transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
         .btn:hover {
@@ -147,7 +144,7 @@ data:
           font-family: var(--serif);
           font-size: clamp(2rem, 5vw, 2.75rem);
           margin: 0 0 0.75rem;
-          color: var(--juniper);
+          color: var(--tabby);
         }
 
         .lede {
@@ -155,6 +152,66 @@ data:
           max-width: 40rem;
           margin: 0 0 3rem;
           font-size: 1.05rem;
+        }
+
+        /* Larry */
+        .larry {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+          gap: 3rem;
+          align-items: center;
+          background: var(--card);
+          border-radius: 24px;
+          padding: 3rem;
+          box-shadow: 0 1px 2px rgba(63, 36, 18, 0.06), 0 12px 32px rgba(63, 36, 18, 0.08);
+          border: 3px solid var(--ginger);
+        }
+        .larry .portrait {
+          aspect-ratio: 1;
+          border-radius: 50%;
+          display: grid;
+          place-items: center;
+          font-size: clamp(6rem, 18vw, 10rem);
+          background: radial-gradient(circle at 35% 30%, var(--cream), var(--ginger));
+        }
+        .larry .badge {
+          display: inline-block;
+          font-size: 0.75rem;
+          font-weight: 600;
+          letter-spacing: 0.15em;
+          text-transform: uppercase;
+          background: var(--ginger);
+          color: var(--milk);
+          border-radius: 999px;
+          padding: 0.3rem 0.9rem;
+          margin-bottom: 1rem;
+        }
+        .larry h2 { font-size: clamp(2.25rem, 6vw, 3.25rem); }
+        .larry p { color: var(--muted); margin: 0 0 1rem; }
+        .stats {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 1rem;
+          margin-top: 1.5rem;
+        }
+        .stats div {
+          background: var(--milk);
+          border-radius: 14px;
+          padding: 1rem;
+          text-align: center;
+        }
+        .stats strong {
+          display: block;
+          font-family: var(--serif);
+          font-size: 1.5rem;
+          color: var(--tabby);
+        }
+        .stats span { font-size: 0.85rem; color: var(--muted); }
+
+        @media (max-width: 720px) {
+          .larry { grid-template-columns: 1fr; padding: 2rem 1.5rem; gap: 2rem; }
+          .larry .portrait { max-width: 260px; margin: 0 auto; width: 100%; }
+          .stats { grid-template-columns: 1fr; }
         }
 
         .grid {
@@ -167,14 +224,14 @@ data:
           background: var(--card);
           border-radius: 18px;
           padding: 2rem 1.75rem;
-          box-shadow: 0 1px 2px rgba(19, 35, 46, 0.06), 0 8px 24px rgba(19, 35, 46, 0.06);
-          border-top: 4px solid var(--botanical);
+          box-shadow: 0 1px 2px rgba(63, 36, 18, 0.06), 0 8px 24px rgba(63, 36, 18, 0.06);
+          border-top: 4px solid var(--ginger);
           transition: transform 0.2s ease;
         }
         .card:hover { transform: translateY(-4px); }
-        .card:nth-child(2) { border-top-color: var(--citrus); }
-        .card:nth-child(3) { border-top-color: var(--juniper); }
-        .card:nth-child(4) { border-top-color: #b5667a; }
+        .card:nth-child(2) { border-top-color: var(--cream); }
+        .card:nth-child(3) { border-top-color: var(--tabby); }
+        .card:nth-child(4) { border-top-color: #9a8f86; }
 
         .card .icon { font-size: 2rem; margin-bottom: 0.75rem; }
 
@@ -182,18 +239,18 @@ data:
           font-family: var(--serif);
           font-size: 1.35rem;
           margin: 0 0 0.5rem;
-          color: var(--juniper);
+          color: var(--tabby);
         }
 
         .card p { margin: 0; color: var(--muted); }
 
-        /* Botanicals */
-        .botanicals {
-          background: var(--juniper);
-          color: var(--tonic);
+        /* Traits */
+        .traits {
+          background: var(--tabby);
+          color: var(--milk);
         }
-        .botanicals h2 { color: var(--tonic); }
-        .botanicals .lede { color: rgba(244, 241, 234, 0.75); }
+        .traits h2 { color: var(--milk); }
+        .traits .lede { color: rgba(251, 245, 236, 0.75); }
 
         .pills {
           display: flex;
@@ -206,45 +263,45 @@ data:
         .pills li {
           padding: 0.6rem 1.2rem;
           border-radius: 999px;
-          background: rgba(244, 241, 234, 0.08);
-          border: 1px solid rgba(244, 241, 234, 0.2);
+          background: rgba(251, 245, 236, 0.08);
+          border: 1px solid rgba(251, 245, 236, 0.2);
           font-weight: 500;
         }
         .pills li.star {
-          background: var(--citrus);
-          color: var(--juniper-deep);
-          border-color: var(--citrus);
+          background: var(--cream);
+          color: var(--tabby-deep);
+          border-color: var(--cream);
         }
 
-        /* Cocktails */
-        .cocktails {
+        /* Steps */
+        .steps {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
           gap: 1.5rem;
         }
-        .cocktail {
+        .step {
           display: flex;
           gap: 1.25rem;
           align-items: flex-start;
           padding: 1.5rem;
           border-radius: 18px;
           background: var(--card);
-          box-shadow: 0 1px 2px rgba(19, 35, 46, 0.06);
+          box-shadow: 0 1px 2px rgba(63, 36, 18, 0.06);
         }
-        .cocktail .num {
+        .step .num {
           flex: none;
           font-family: var(--serif);
           font-size: 2.25rem;
           font-weight: 800;
           line-height: 1;
-          color: var(--botanical);
+          color: var(--ginger);
         }
-        .cocktail h3 {
+        .step h3 {
           margin: 0 0 0.25rem;
           font-size: 1.1rem;
-          color: var(--juniper);
+          color: var(--tabby);
         }
-        .cocktail p { margin: 0; color: var(--muted); font-size: 0.95rem; }
+        .step p { margin: 0; color: var(--muted); font-size: 0.95rem; }
 
         /* Quote */
         blockquote {
@@ -255,7 +312,7 @@ data:
           font-style: italic;
           font-size: clamp(1.5rem, 4vw, 2.25rem);
           line-height: 1.35;
-          color: var(--juniper);
+          color: var(--tabby);
         }
         blockquote cite {
           display: block;
@@ -267,77 +324,96 @@ data:
         }
 
         footer {
-          background: var(--juniper-deep);
-          color: rgba(244, 241, 234, 0.7);
+          background: var(--tabby-deep);
+          color: rgba(251, 245, 236, 0.7);
           text-align: center;
           padding-block: 2.5rem;
           font-size: 0.9rem;
         }
-        footer strong { color: var(--citrus); }
+        footer strong { color: var(--cream); }
       </style>
     </head>
     <body>
 
       <header class="hero">
-        <div class="bubbles" aria-hidden="true">
-          <span></span><span></span><span></span><span></span><span></span><span></span>
+        <div class="paws" aria-hidden="true">
+          <span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span>
         </div>
         <div class="wrap">
           <span class="eyebrow">A public service announcement from Octopus Deploy</span>
-          <h1>Gin is <em>cool.</em></h1>
-          <p>Not the drink. The person. Gin works at Octopus Deploy, and frankly the rest of us are lucky to be here at the same time. It's time everyone knew.</p>
-          <a class="btn" href="#why">Find out why</a>
+          <h1>Fat cats are <em>the best.</em></h1>
+          <p>Round, heavy, and unbothered. Fat cats have worked out that a good life is mostly naps and snacks, and they would like you to catch up.</p>
+          <a class="btn" href="#larry">Meet Larry</a>
         </div>
       </header>
 
       <main>
+        <section id="larry">
+          <div class="wrap">
+            <article class="larry">
+              <div class="portrait" aria-hidden="true">🐈</div>
+              <div>
+                <span class="badge">Fat Cat of the Year</span>
+                <h2>Larry</h2>
+                <p>Every fat cat is great. Larry is the greatest. He treats a sunbeam like a job and a cushion like a throne, and dinner is never far from his mind.</p>
+                <p>Larry doesn't chase things, he waits for them to come to him. It works every time.</p>
+                <div class="stats">
+                  <div><strong>18h</strong><span>naps per day</span></div>
+                  <div><strong>∞</strong><span>treats deserved</span></div>
+                  <div><strong>0</strong><span>stairs taken willingly</span></div>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+
         <section id="why">
           <div class="wrap">
-            <h2>Why Gin?</h2>
-            <p class="lede">Some people are good at one thing. Gin is good at a dozen things, and makes it look easy.</p>
+            <h2>Why fat cats?</h2>
+            <p class="lede">A regular cat is nice. A fat cat is more of a nice cat, and that's just maths.</p>
             <div class="grid">
               <article class="card">
-                <div class="icon" aria-hidden="true">🐙</div>
-                <h3>Octopus through and through</h3>
-                <p>Eight arms' worth of output from one human. Deployments, conversations, problems solved: Gin gets a tentacle on all of it.</p>
+                <div class="icon" aria-hidden="true">🛋️</div>
+                <h3>Masters of rest</h3>
+                <p>Fat cats have turned lounging into an art. Watch one settle into a cushion and you'll see what we mean.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">🚀</div>
-                <h3>Ships with confidence</h3>
-                <p>Gin's work goes out green. Reliable, repeatable, and nobody has to hold their breath when it hits production.</p>
+                <div class="icon" aria-hidden="true">🫓</div>
+                <h3>The loaf</h3>
+                <p>Paws tucked in and a perfect rectangle on the couch. Only a truly round cat can pull off a loaf this good.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">🤝</div>
-                <h3>Makes the team better</h3>
-                <p>The kind of colleague who leaves every thread, meeting and pull request a bit better than they found it.</p>
+                <div class="icon" aria-hidden="true">🤗</div>
+                <h3>Maximum cuddle</h3>
+                <p>More cat per cuddle and a warm lap all winter. The value for money is hard to beat.</p>
               </article>
               <article class="card">
-                <div class="icon" aria-hidden="true">✨</div>
-                <h3>Easy to love</h3>
-                <p>Helpful, generous with time, and good company. Working with Gin is one of the best parts of the job.</p>
+                <div class="icon" aria-hidden="true">😼</div>
+                <h3>Unbothered</h3>
+                <p>Deadlines, meetings, failed builds: none of it gets through to a fat cat. We could all learn something.</p>
               </article>
             </div>
           </div>
         </section>
 
-        <section class="botanicals">
+        <section class="traits">
           <div class="wrap">
-            <h2>What Gin brings</h2>
-            <p class="lede">Being cool is the only rule. Everything else is Gin showing off.</p>
+            <h2>What fat cats bring</h2>
+            <p class="lede">Being round is the only rule. Everything else is a bonus.</p>
             <ul class="pills">
-              <li class="star">Coolness</li>
-              <li>Kindness</li>
-              <li>Curiosity</li>
-              <li>Good judgement</li>
-              <li>Clear thinking</li>
-              <li>Calm under pressure</li>
-              <li>Great ideas</li>
-              <li>Attention to detail</li>
-              <li>Humour</li>
-              <li>Generosity</li>
-              <li>Craft</li>
-              <li>Ownership</li>
-              <li>Collaboration</li>
+              <li class="star">Chonk</li>
+              <li>Belly floof</li>
+              <li>Loafing</li>
+              <li>Slow blinks</li>
+              <li>Toe beans</li>
+              <li>Purring</li>
+              <li>Keyboard warming</li>
+              <li>Sunbeam naps</li>
+              <li>Snack radar</li>
+              <li>Judgemental stares</li>
+              <li>Biscuit making</li>
+              <li>Gravitas</li>
+              <li>Lap weight</li>
               <li>Excellent vibes</li>
             </ul>
           </div>
@@ -346,34 +422,34 @@ data:
         <section>
           <div class="wrap">
             <h2>Start here</h2>
-            <p class="lede">Four ways to appreciate Gin that make the case better than any web page could.</p>
-            <div class="cocktails">
-              <div class="cocktail">
+            <p class="lede">Four ways to show a fat cat the respect they deserve.</p>
+            <div class="steps">
+              <div class="step">
                 <span class="num">01</span>
                 <div>
-                  <h3>Say thanks</h3>
-                  <p>Drop Gin a message in Slack. Be specific about what they did. Emoji encouraged.</p>
+                  <h3>Offer a lap</h3>
+                  <p>Sit down and stay still. The cat will decide when you're allowed to get up.</p>
                 </div>
               </div>
-              <div class="cocktail">
+              <div class="step">
                 <span class="num">02</span>
                 <div>
-                  <h3>Ask for their take</h3>
-                  <p>Stuck on something? Gin's perspective is worth having. Ask early.</p>
+                  <h3>Rub the belly (carefully)</h3>
+                  <p>It might be an invitation. It might be a trap. Go in knowing the risks.</p>
                 </div>
               </div>
-              <div class="cocktail">
+              <div class="step">
                 <span class="num">03</span>
                 <div>
-                  <h3>Pair up</h3>
-                  <p>Grab some time and work on something together. You'll both come out ahead.</p>
+                  <h3>Take photos</h3>
+                  <p>A fat cat in a box that's too small is the best thing on the internet. Record it.</p>
                 </div>
               </div>
-              <div class="cocktail">
+              <div class="step">
                 <span class="num">04</span>
                 <div>
                   <h3>Spread the word</h3>
-                  <p>Share this page. Everyone at Octopus deserves to know that Gin is cool.</p>
+                  <p>Share this page. Everyone at Octopus deserves to know about Larry.</p>
                 </div>
               </div>
             </div>
@@ -383,8 +459,8 @@ data:
         <section>
           <div class="wrap">
             <blockquote>
-              "Gin has saved more deployments, and more of our sanity, than all the runbooks in the Octoverse."
-              <cite>Everyone at Octopus Deploy (probably)</cite>
+              "I'm not fat. I'm fluffy, and my bones are big, and I'm due for a snack."
+              <cite>Larry (probably)</cite>
             </blockquote>
           </div>
         </section>
@@ -392,7 +468,7 @@ data:
 
       <footer>
         <div class="wrap">
-          Served fresh from Kubernetes, deployed with Octopus. <strong>Gin is cool.</strong> Please appreciate responsibly.
+          Served fresh from Kubernetes, deployed with Octopus. <strong>Larry is a fat cat.</strong> Please pat responsibly.
         </div>
       </footer>
 
